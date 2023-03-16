@@ -8,12 +8,11 @@
 import UIKit
 
 class QuestionVCView: UIView {
-    
+  
     let askLabel = UILabel(text: "ASK ME A GENERAL QUESTION", font: ODFonts.titleLabelFont)
     let yesButton = UIButton(title: "YES", bgColor: .green, textColor: .white, font: ODFonts.titleLabelFont, cornerRadius: 75)
     let noButton = UIButton(title: "NO", bgColor: .red, textColor: .white, font: ODFonts.titleLabelFont, cornerRadius: 75)
     let randomButton = UIButton(title: "RANDOM ANSWER", bgColor: .systemBlue, textColor: .white, font: ODFonts.regulatTextFont, cornerRadius: 100)
-    
 
     init() {
         super.init(frame: CGRect())
@@ -24,8 +23,8 @@ class QuestionVCView: UIView {
     func  setupViews() {
         backgroundColor = .black
         askLabel.textColor = .white
-        
     }
+  
     func setupConstraints() {
         let stack = UIStackView(arrangedSubviews: [yesButton,noButton], axis: .horizontal, spacing: 100)
         addSubview(askLabel)

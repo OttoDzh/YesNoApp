@@ -10,7 +10,6 @@ import Gifu
 
 class MainViewController: UIViewController {
 
-    
     let mainView = MainVCView()
     
     override func viewDidLoad() {

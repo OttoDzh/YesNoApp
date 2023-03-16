@@ -8,9 +8,9 @@
 import Foundation
 
 class NetWorkManager {
-    
+
     static let params = "?force=<answer>"
-    
+  
     static func getData(params: String, comepletion: @escaping(_ yesno: YesNo) -> Void ) {
         let yesUrl = "https://yesno.wtf/api\(params)"
         guard let urlString = URL(string: yesUrl) else {
@@ -30,11 +30,8 @@ class NetWorkManager {
             } catch {
                 print(error.localizedDescription)
             }
-            
         }.resume()
-    }
-    
-    
+    }  
 }
 
 

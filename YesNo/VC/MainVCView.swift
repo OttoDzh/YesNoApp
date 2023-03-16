@@ -16,8 +16,6 @@ class MainVCView: UIView {
     let imageGif = GIFImageView()
     let dismissButton = UIButton(title: " BACK ", bgColor: .black, textColor: .white, font: ODFonts.titleLabelFont, cornerRadius: 0)
 
-   
-
     init() {
         super.init(frame: CGRect())
         setupViews()
@@ -26,17 +24,13 @@ class MainVCView: UIView {
     
     func setupViews() {
         backgroundColor = .black
-        
         imageGif.contentMode = .scaleAspectFill
-       
-        
-        
     }
     
     func setupConstraints() {
         addSubview(imageGif)
         addSubview(dismissButton)
-        
+      
         Helper.tamicOff(views: [imageGif,dismissButton])
         
         NSLayoutConstraint.activate([imageGif.topAnchor.constraint(equalTo: topAnchor, constant: 200),

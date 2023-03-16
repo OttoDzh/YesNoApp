@@ -13,7 +13,6 @@ class QuestionVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.view = questionView
         addTargets()
     }
@@ -23,9 +22,7 @@ class QuestionVC: UIViewController {
         questionView.noButton.addTarget(self, action: #selector(toTheNoMain), for: .touchUpInside)
         questionView.randomButton.addTarget(self, action: #selector(randomMain), for: .touchUpInside)
     }
-    
-
-
+  
     @objc func randomMain() {
         NetWorkManager.getData(params: ApiMethod.random.rawValue){ yesno in
                 DispatchQueue.main.async {
@@ -35,10 +32,8 @@ class QuestionVC: UIViewController {
                     vc.mainView.imageGif.animate(withGIFURL: gifUrl!)
                     self.present(vc, animated: true)
                 }
-                
             }
-       
-   
+ 
     }
    
     @objc func toTheNoMain() {
@@ -50,9 +45,7 @@ class QuestionVC: UIViewController {
                     vc.mainView.imageGif.animate(withGIFURL: gifUrl!)
                     self.present(vc, animated: true)
                 }
-                
             }
-        
     }
     
     @objc func toTheMain() {
@@ -64,10 +57,6 @@ class QuestionVC: UIViewController {
                     vc.mainView.imageGif.animate(withGIFURL: gifUrl!)
                     self.present(vc, animated: true)
                 }
-                
             }
-       
-   
     }
-
 }
